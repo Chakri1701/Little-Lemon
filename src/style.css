@@ -1,0 +1,17 @@
+:root { --gap: 12px; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.5; }
+header, main, footer { padding: 1rem; max-width: 860px; margin: 0 auto; }
+h1, h2 { margin: .2rem 0 .6rem; }
+.grid { display: grid; gap: var(--gap); grid-template-columns: 1fr; }
+label { font-weight: 600; }
+input, select { padding: .6rem; width: 100%; }
+.error { color: #b00020; margin: 0; font-size: .9rem; }
+.hint { color: #555; }
+.btn { margin-top: .5rem; padding: .7rem 1rem; font-weight: 700; }
+.confirm { background: #f4fff7; border: 1px solid #b8f0c9; padding: 1rem; margin-top: 1rem; }
+
+@media (min-width: 720px) {
+  .grid { grid-template-columns: 1fr 1fr; align-items: center; }
+  .grid label { grid-column: 1 / -1; } /* stack labels above fields consistently */
+}
